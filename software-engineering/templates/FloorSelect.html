@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout</title>
+	<link rel="stylesheet" href="/static/css/topspot.css">
+	<!-- Latest compiled and minified CSS -->
+	
+	<script type="text/javascript" src="/static/topspot.js" ></script>
+
+	
+    <link rel="stylesheet" type="text/css" href="/static/css/floorselect.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+    crossorigin="anonymous"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+
+</head>
+<body>
+
+<!-- <a href="/logout">Logout</a> -->
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <ul class="navbar-nav ml-auto"></ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="/floor_select_help">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/friends">Friends</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/logout">Logout</a>
+                  </li>
+                </ul>
+              </ul>
+          </nav>
+<div class="jumbotron text-center">
+<div class="text-center">
+<img src="/static/topspot_logo_jumbotron.png" class="img-fluid " alt="Responsive image">
+</div>
+</div>
+  <div class="text-center">
+    <form action = "/GroundFloor">
+      <button class="btn btn-primary mb-sm-1 col-md-10 btn-lg">Ground Floor {{GroundFloorCount}}/63</button>
+    </form>
+    <form action = "/FirstFloor">
+      <button class="btn mb-sm-1 col-md-10 btn-primary btn-lg">First Floor {{FirstFloorCount}}/52</button>
+    </form>
+    <form action = "/SecondFloor">
+      <button class="btn mb-sm-1 col-md-10 btn-primary btn-lg">Second Floor {{SecondFloorCount}}/21</button>
+    </form>
+      <button class="btn mb-sm-1 col-md-10 btn-primary btn-lg" disabled>Third Floor ****CLOSED****</button>
+    <form action = "/FourthFloor">
+      <button class="btn mb-sm-1 col-md-10 btn-primary btn-lg">Fourth Floor {{FourthFloorCount}}/42</button>
+    </form>
+</div>
+
+
+
+
+
+</body>
+</html>

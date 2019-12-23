@@ -1,0 +1,57 @@
+.floorplan {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto 
+}
+
+.spot_vacant {
+  background-color: #2196F3;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  border: solid black 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.spot_taken {
+  background-color: #FF0000;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  border: solid black 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.user_spot {
+  background-color: green;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  border: solid black 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.not_spot {
+  padding: 20px;
+  font-size: 30px;
+  width: 15px;
+  height: 15px;
+}
+
+.has_outlet {
+  border: solid gold 7px;
+}
+
+h1 { 
+  color: #111; 
+  font-family: 'Helvetica Neue', sans-serif; 
+  font-size: 75px; 
+  font-weight: bold; 
+  letter-spacing: -1px; 
+  line-height: 1; 
+  text-align: center; 
+}
+

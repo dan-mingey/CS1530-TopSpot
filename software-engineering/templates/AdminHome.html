@@ -1,0 +1,31 @@
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/css/friends_style.css">   
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <ul class="navbar-nav ml-auto"></ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+                <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+            </li>
+        </ul>
+      </ul>
+  </nav>
+
+  <div class="container" style="margin-top: 1%;">
+    <div class="text-center">
+    <div class="top">
+        <h1>Admin Home</h1>
+    </div>
+    </div>
+
+  <div class="container"  style="margin-top: 5%;">
+    <div class="text-center">
+    <form action = "/admin_floor">
+      <button class="btn btn-primary mb-sm-1 col-md-10 btn-lg">Manage Floors</button>
+    </form>
+    <form action = "/admin_users">
+      <button class="btn mb-sm-1 col-md-10 btn-primary btn-lg">Manage Users</button>
+    </form>
+</div>

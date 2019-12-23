@@ -1,0 +1,68 @@
+{%extends "layout.html"%}
+{%block floorplan%}
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/css/friends_style.css">   
+</head>
+	<nav class="navbar navbar-inverse navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <form class="form-inline my-2 my-lg-0" action="/add_friend" method = "post">
+                <input class="form-control mr-sm-2" name = "Friend" placeholder="Enter Username" aria-label="Friend">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Add Friend</button>
+            </form>
+        </ul>
+		<ul class="nav navbar-nav navbar-right">
+                <li class="nav-item">
+						<a class="nav-link" href="/friends_help">Help</a>
+					</li>
+                <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('floor_select')}}">Select Floor</a>
+                </li>
+			<li class="nav-item">
+				<a class="nav-link" id = "unclaim_spot">Unclaim Spot</a>
+			</li>
+			<li class="nav-item">
+					<a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+			</li>
+            </ul>
+        </div>	  
+      </nav>
+
+<div class="container" style="margin-top: 1%;">
+    <div class="top">
+        <h2>Friends List</h2>
+    </div>
+  <div class="row">
+  <div class="center">
+        {% if friends|length < 1 %}
+        <div class = "top">
+            <h4>You currently do not have any friends.</h4>
+        </div>
+        {%else%}
+        <div class="shadow">
+        <div class="clearfix">
+        {% for f in friends%}
+            <div class="col-sm-12">
+                <div class="col-sm-8">
+                      <h4>{{f}}</h4>
+                    </div>     
+                    <div class="col-sm-2">
+                        <a href="{{url_for('remove_friend', ID=f)}}">Remove Friend</a>
+                    </div> 
+                </div>
+            <hr />
+        {%endfor%}
+        {%endif%}
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+
+{% if Error%}
+<script>AlertFriendDoesntExist()</script>
+{% endif %}
+
+
+{%endblock%}

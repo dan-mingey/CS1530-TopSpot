@@ -1,0 +1,25 @@
+
+INSTALATION REQUIREMENTS:
+-------------------------------------------------------------
+The following must be installed for the program to run: 
+Python3
+Flask 
+Pymongo (pip install pymongo ---> type and run in terminal)
+Pymysql (pip install pymysql ---> type and run in terminal )
+
+
+Commands (for developers):
+--------------------------------------------------------------
+Export FLASK_APP=topspot.py: set’s FLASK_APP variable to name of program so that flask program will know where to look
+Flask initdb: initializes the database; note that this is an internal command integrated into the code and not a standard flask command
+Flask run: runs the main python file
+
+
+Database Management: 
+--------------------------------------------------------------
+Download MySQLWorkbench
+Connect to Database
+ - user='root'
+ - password='TopSpotAWS'
+ - host='topspot.cbjrgugeafkg.us-east-1.rds.amazonaws.com'
+ - database='topspot'

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/topspot.css') }}">
+	<!-- Latest compiled and minified CSS -->
+	
+	<script type="text/javascript" src="{{ url_for('static', filename='topspot.js') }}" ></script>
+
+	{% block SelectFloor %}
+	{% endblock %}
+
+
+</head>
+<body>
+
+<!-- <a href="{{url_for('logout')}}">Logout</a> -->
+
+{% block body %}
+{% endblock %}
+
+{% block floorplan %}
+
+{% endblock %}
+</body>
+</html>
